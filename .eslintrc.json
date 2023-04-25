@@ -5,6 +5,7 @@
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "plugin:import/warnings",
+    "plugin:tailwindcss/recommended",
     "prettier",
     "standard-with-typescript"
   ],
@@ -14,7 +15,14 @@
     "project": ["./tsconfig.json"],
     "sourceType": "module"
   },
-  "plugins": ["@typescript-eslint", "react", "react-hooks", "import", "unused-imports"],
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "react-hooks",
+    "import",
+    "unused-imports",
+    "tailwindcss"
+  ],
   "rules": {
     "import/order": [
       "error",
