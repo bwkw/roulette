@@ -27,7 +27,8 @@
           "builtin",
           "external",
           "internal",
-          ["parent", "sibling"],
+          "parent",
+          "sibling",
           "object",
           "index"
         ],
@@ -57,9 +58,10 @@
             "position": "after"
           }
         ],
-        "newlines-between": "never"
+        "newlines-between": "always"
       }
     ],
+    "import/newline-after-import": "error",
     "padding-line-between-statements": [
       "error",
       {
