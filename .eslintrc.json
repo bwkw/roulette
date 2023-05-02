@@ -70,19 +70,7 @@
       }
     ],
     "import/newline-after-import": "error",
-    "padding-line-between-statements": [
-      "error",
-      {
-        "blankLine": "always",
-        "prev": "*",
-        "next": "return"
-      },
-      {
-        "blankLine": "any",
-        "prev": "singleline-const",
-        "next": "return"
-      }
-    ],
+    "padding-line-between-statements": "off",
     "@typescript-eslint/consistent-type-imports": [
       "error",
       {
@@ -126,6 +114,7 @@
       }
     ],
     "react/react-in-jsx-scope": "off",
-    "@typescript-eslint/space-before-function-paren": "off"
+    "@typescript-eslint/space-before-function-paren": "off",
+    "@typescript-eslint/comma-dangle": "off"
   }
 }
