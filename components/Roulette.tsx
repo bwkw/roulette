@@ -1,3 +1,5 @@
+import type { FC } from 'react'
+
 import dynamic from 'next/dynamic'
 import { useState } from 'react'
 
@@ -5,13 +7,16 @@ export type RouletteOption = {
   id: number
   option: string
 }
+type RouletteProps = {
+  options: RouletteOption[]
+}
 
 const DynamicWheel = dynamic(
   async () => await import('react-custom-roulette').then((module) => module.Wheel),
   { ssr: false },
 )
 
-export const Roulette = ({ options }: { options: RouletteOption[] }) => {
+export const Roulette: FC<RouletteProps> = ({ options }) => {
   const [mustSpin, setMustSpin] = useState(false)
   const [prizeNumber, setPrizeNumber] = useState(0)
 
