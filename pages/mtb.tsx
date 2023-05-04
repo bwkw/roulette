@@ -27,13 +27,12 @@ export default function Mtb() {
   return (
     <>
       <div className='flex h-screen flex-col items-center justify-center bg-gray-100'>
-        <h1 className='mb-8 text-4xl font-bold text-black'>的場クッパ</h1>
         <div className='flex'>
-          <Roulette options={optionA} value={top} setValue={setTop} />
-          <Roulette options={optionB} value={bottom} setValue={setBottom} />
+          <Roulette title='どこから？' options={optionA} value={top} setValue={setTop} />
+          <Roulette title='どこへ？' options={optionB} value={bottom} setValue={setBottom} />
         </div>
         <button
-          className='mt-10 rounded-md bg-indigo-600 px-10 py-2 font-bold text-white shadow-md transition duration-200 ease-in hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 active:bg-indigo-800'
+          className='mt-20 rounded-xl bg-indigo-600 px-10 py-2 text-xl font-bold text-white shadow-md transition duration-200 ease-in hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 active:bg-indigo-800'
           onClick={() => {
             submitRouletteResult()
           }}
