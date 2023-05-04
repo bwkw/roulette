@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 import type { RouletteOption } from '@/components/Roulette'
 import { Roulette } from '@/components/Roulette'
 
@@ -14,13 +16,16 @@ const optionB: RouletteOption[] = [
 ]
 
 export default function Mtb() {
+  const [top, setTop] = useState('')
+  const [bottom, setBottom] = useState('')
+
   return (
     <>
       <div className='flex h-screen flex-col items-center justify-center bg-gray-100'>
         <h1 className='mb-8 text-4xl font-bold text-black'>的場クッパ</h1>
         <div className='flex'>
-          <Roulette options={optionA} />
-          <Roulette options={optionB} />
+          <Roulette options={optionA} value={top} setValue={setTop} />
+          <Roulette options={optionB} value={bottom} setValue={setBottom} />
         </div>
       </div>
     </>
