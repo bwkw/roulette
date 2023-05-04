@@ -8,7 +8,6 @@ export type RouletteOption = {
   option: string
 }
 type RouletteProps = {
-  title: string
   options: RouletteOption[]
   value: string
   setValue: (value: string) => void
@@ -19,7 +18,7 @@ const DynamicWheel = dynamic(
   { ssr: false },
 )
 
-export const Roulette: FC<RouletteProps> = ({ title, options, value, setValue }) => {
+export const Roulette: FC<RouletteProps> = ({ options, value, setValue }) => {
   const [mustSpin, setMustSpin] = useState(false)
   const [prizeNumber, setPrizeNumber] = useState(0)
 
@@ -32,7 +31,6 @@ export const Roulette: FC<RouletteProps> = ({ title, options, value, setValue })
 
   return (
     <div className='flex flex-col items-center'>
-      <h1 className='mb-5 text-5xl font-bold text-black'>{title}</h1>
       <div className='my-3 flex justify-center'>
         <button
           className='rounded-full bg-blue-500 px-6 py-2 font-bold text-white shadow-md transition duration-200 ease-in hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 active:bg-blue-700'
