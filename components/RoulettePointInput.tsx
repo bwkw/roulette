@@ -22,23 +22,27 @@ export const RoulettePointInput: FC<RoulettePointInputProps> = ({ min, max, poin
     }
   }
 
+  console.log(point)
   return (
     <div className='ml-4 flex items-center'>
       <GiDaemonSkull className='mr-2 text-3xl text-black' />
       <input
         type='number'
-        value={point}
+        value={point === 0 ? '' : point}
         min={min}
         max={max}
         onChange={(e) => {
           handlePointsChange(Number(e.target.value))
         }}
         onFocus={(e) => {
-          e.target.value = ''
+          if (e.target.value === '0') {
+            e.target.value = ''
+          }
         }}
         onBlur={(e) => {
           if (e.target.value === '') {
             e.target.value = '0'
+            console.log('blur')
           }
         }}
         className='rounded border border-gray-300 px-3 py-2 text-3xl text-black focus:border-blue-300 focus:outline-none'
