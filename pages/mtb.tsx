@@ -48,20 +48,20 @@ export default function Mtb() {
       <div className='flex h-screen flex-col items-center justify-center bg-gray-100'>
         <div className='flex items-start'>
           <div className='flex flex-col items-center'>
-            <h1 className='mb-5 h-12 text-5xl font-bold text-black'>どこから？</h1>
+            <h1 className='mb-4 mt-10 h-12 text-5xl font-bold text-black'>どこから？</h1>
             <Roulette options={optionA} value={top} setValue={setTop} />
           </div>
           <div className='flex flex-col items-center'>
-            <h1 className='mb-5 h-12 text-5xl font-bold text-black'>どこへ？</h1>
+            <h1 className='mb-4 mt-10 h-12 text-5xl font-bold text-black'>どこへ？</h1>
             <Roulette options={optionB} value={bottom} setValue={setBottom} />
           </div>
           <div className='flex flex-col items-center'>
-            <h1 className='mb-5 h-12 text-5xl font-bold text-black'>何ポイント？</h1>
+            <h1 className='mb-4 mt-10 h-12 text-5xl font-bold text-black'>何ポイント？</h1>{' '}
             <RoulettePointInput max={300} min={0} point={point} setPoint={setPoint} />
           </div>
         </div>
         <button
-          className='mt-20 rounded-xl bg-indigo-600 px-10 py-2 text-xl font-bold text-white shadow-md transition duration-200 ease-in hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 active:bg-indigo-800'
+          className='mt-16 rounded-xl bg-indigo-600 px-10 py-2 text-xl font-bold text-white shadow-md transition duration-200 ease-in hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 active:bg-indigo-800'
           onClick={confirmPopup}
         >
           ルーレットの結果を反映

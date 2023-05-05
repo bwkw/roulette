@@ -39,25 +39,27 @@ export const Roulette: FC<RouletteProps> = ({ options, value, setValue }) => {
           START
         </button>
       </div>
-      <DynamicWheel
-        mustStartSpinning={mustSpin}
-        prizeNumber={prizeNumber}
-        data={options}
-        onStopSpinning={() => {
-          setValue(options[prizeNumber].option)
-          setMustSpin(false)
-        }}
-        outerBorderColor={'#f2f2f2'}
-        outerBorderWidth={25}
-        innerBorderColor={'#f2f2f2'}
-        radiusLineColor={'#dedede'}
-        radiusLineWidth={10}
-        textColors={['#ffffff']}
-        fontSize={50}
-        perpendicularText={true}
-        backgroundColors={['#F22B35', '#F99533', '#24CA69']}
-      />
-      <div className='mt-2 text-4xl text-black'>{!mustSpin ? value : '...'}</div>
+      <div style={{ transform: 'scale(0.9)' }}>
+        <DynamicWheel
+          mustStartSpinning={mustSpin}
+          prizeNumber={prizeNumber}
+          data={options}
+          onStopSpinning={() => {
+            setValue(options[prizeNumber].option)
+            setMustSpin(false)
+          }}
+          outerBorderColor={'#f2f2f2'}
+          outerBorderWidth={10}
+          innerBorderColor={'#f2f2f2'}
+          radiusLineColor={'#dedede'}
+          radiusLineWidth={10}
+          textColors={['#ffffff']}
+          fontSize={50}
+          perpendicularText={true}
+          backgroundColors={['#F22B35', '#F99533', '#24CA69']}
+        />
+      </div>
+      <div className='text-4xl text-black'>{!mustSpin ? value : '...'}</div>
     </div>
   )
 }

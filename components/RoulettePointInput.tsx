@@ -22,7 +22,7 @@ export const RoulettePointInput: FC<RoulettePointInputProps> = ({ min, max, poin
 
   console.log(point)
   return (
-    <div className='ml-4 flex items-center'>
+    <div className='flex items-center'>
       <input
         type='number'
         value={point === 0 ? '' : point}
@@ -39,7 +39,6 @@ export const RoulettePointInput: FC<RoulettePointInputProps> = ({ min, max, poin
         onBlur={(e) => {
           if (e.target.value === '') {
             e.target.value = '0'
-            console.log('blur')
           }
         }}
         className='rounded border border-gray-300 px-3 py-2 text-3xl text-black focus:border-blue-300 focus:outline-none'
