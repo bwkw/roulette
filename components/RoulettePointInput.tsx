@@ -1,7 +1,5 @@
 import type { FC } from 'react'
 
-import { GiDaemonSkull } from 'react-icons/gi'
-
 type RoulettePointInputProps = {
   min: number
   max: number
@@ -25,7 +23,6 @@ export const RoulettePointInput: FC<RoulettePointInputProps> = ({ min, max, poin
   console.log(point)
   return (
     <div className='ml-4 flex items-center'>
-      <GiDaemonSkull className='mr-2 text-3xl text-black' />
       <input
         type='number'
         value={point === 0 ? '' : point}
