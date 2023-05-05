@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Swal from 'sweetalert2'
 
 import type { RouletteOption } from '@/components/Roulette'
 import { Roulette } from '@/components/Roulette'
@@ -26,6 +27,22 @@ export default function Mtb() {
     console.log(top, bottom)
   }
 
+  const confirmPopup = async () => {
+    const result = await Swal.fire({
+      title: `${top}から${bottom}に${point}ptを譲渡しますか？`,
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonText: 'はい',
+      cancelButtonText: 'いいえ',
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+    })
+
+    if (result.isConfirmed) {
+      submitRouletteResult()
+    }
+  }
+
   return (
     <>
       <div className='flex h-screen flex-col items-center justify-center bg-gray-100'>
@@ -45,9 +62,7 @@ export default function Mtb() {
         </div>
         <button
           className='mt-20 rounded-xl bg-indigo-600 px-10 py-2 text-xl font-bold text-white shadow-md transition duration-200 ease-in hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 active:bg-indigo-800'
-          onClick={() => {
-            submitRouletteResult()
-          }}
+          onClick={confirmPopup}
         >
           ルーレットの結果を反映
         </button>
