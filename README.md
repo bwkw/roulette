@@ -21,3 +21,6 @@ yarn run lint-fix
 ```
 yarn run format
 ```
+
+## View
+<img width="1375" alt="image" src="https://github.com/bwkw/roulette/assets/63583536/128e1710-b0e8-436a-a859-71564a10472d">
