@@ -39,7 +39,7 @@ export const Roulette: FC<RouletteProps> = ({ options, value, setValue }) => {
           START
         </button>
       </div>
-      <div style={{ transform: 'scale(0.9)' }}>
+      <div style={{ transform: 'scale(0.95)', overflow: 'hidden' }}>
         <DynamicWheel
           mustStartSpinning={mustSpin}
           prizeNumber={prizeNumber}
@@ -54,12 +54,12 @@ export const Roulette: FC<RouletteProps> = ({ options, value, setValue }) => {
           radiusLineColor={'#dedede'}
           radiusLineWidth={10}
           textColors={['#ffffff']}
-          fontSize={50}
+          fontSize={20}
           perpendicularText={true}
           backgroundColors={['#F22B35', '#F99533', '#24CA69']}
         />
       </div>
-      <div className='text-4xl text-black'>{!mustSpin ? value : '...'}</div>
+      <div className='text-3xl text-black'>{!mustSpin ? value : '...'}</div>
     </div>
   )
 }
