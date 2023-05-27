@@ -1,6 +1,6 @@
 ## OverView
 
-Pefectly set up Next.js project sample.
+Next.js roulette sample.
 
 ## How to set up
 
